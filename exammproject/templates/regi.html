@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 align="center"><u>Registration Form</u></h3>
+<br>
+<form method="post" action="" align="center">
+    {% csrf_token %}
+       <input type="text" name="username" placeholder="enter username"><br>
+
+      <input type="password" name="password" placeholder="enter password">
+    <br>
+    <input type="password" name="con" placeholder="enter confirm pwd">
+    <br>
+         <input type="email" name="email" placeholder="enter email">
+    <br>
+    <br>
+    <div align="center">
+
+   <a class="btn btn-success"   href="{% url 'exammapp:deliver' %}">SUBMIT</a></div>
+</form>
+{% for i in messages %}
+{{i}}
+{% endfor %}
+{% endblock %}

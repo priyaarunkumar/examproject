@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <img src="{%  static 'img/po.jpg' %}" alt="our pdt" width="1300px;" height="300px;"></div>
+<br>
+
+<div align="center">
+
+   <a class="btn btn-success"   href="{% url 'exammapp:add' %}">DELIVERY DETAILS</a></div>
+
+{% endblock %}

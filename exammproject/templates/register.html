@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h4  align="center"><u>REGISTRAION FORM</u></h4>
+<br>
+<br>
+<form method="post" action="" align="center">
+    {% csrf_token %}
+       <input type="text" name="username" placeholder="enter username"><br>
+
+      <input type="password" name="password" placeholder="enter password">
+    <br>
+    <input type="password" name="con" placeholder="enter confirm pwd">
+    <br>
+         <input type="email" name="email" placeholder="enter email">
+    <br>
+    <br>
+    <input type="submit">
+</form>
+{% for i in messages %}
+{{i}}
+{% endfor %}
+{% endblock %}

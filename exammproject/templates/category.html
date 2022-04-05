@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+{% if category %}
+{{ category.desc }}
+{% else %}}
+<h3> WELCOME PRODUCT</h3>
+{% endif %}
+{% endblock %}
+
+
+
+
+<h3> SEE OUR COLLECTIONS</h3>
+
+
+{% block  content %}
+{% if category %}
+<div>
+    <div>
+        </p><a href="">ALL PRODUCT</a>
+    </div>
+</div>
+{% endif %}
+
+<div>
+    <img src="{% static 'img/food.jpg' %}" alt="our pdt" width="1300px;" height="350px;"></div>
+<br>
+<br>
+<div align="center">
+
+   <a class="btn btn-success"   href="{% url 'exammapp:log' %}">Food Ordering</a></div>
+
+
+
+    <div>
+        {% for i in product %}
+        <div style="text-align:center;">
+            <a href="{{i.get_url}}"><img src="{{i.imgg.url}}" alt="hello" width="100px;" height="100px;"></a>
+            <br>
+            {{i.price}}<br>
+            <h3>{{i.name}}</h3>
+        </div>
+
+        {% endfor %}
+
+        </div>
+
+    <br>
+
+
+{% endblock %}

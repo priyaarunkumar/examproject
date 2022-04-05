@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 align="center"><u>FOOD DETAILS</u></h3>
+<br>
+<br>
+
+<form method="post"  align=center id="personForm" data-prize-url="{% url 'exammapp:ajax_load_prize' %}" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br>
+    <br>
+    <div align="center">
+
+   <a class="btn btn-success"   href="{% url 'exammapp:success' %}">SUBMIT</a></div>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+   $("#id_food").change(function () {
+        const url = $("#personForm").attr("data-prize-url");  // get the url of the `load_cities` view
+        const foodId = $(this).val();  // get the selected country ID from the HTML input
+
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request (= /persons/ajax/load-cities/ )
+            data: {
+                'food_id': foodId       // add the country id to the GET parameters
+            },
+            success: function (data) {   // `data` is the return of the `load_cities` view function
+                  // replace the contents of the city input with the data that came from the server
+
+
+                let html_data = '<option value="">---------</option>';
+                data.forEach(function (prize) {
+                    html_data += `<option value="${prize.id}">${prize.name}</option>`
+                });
+                console.log(html_data);
+                $("#id_prize").html(html_data);
+
+
+
+            }
+        });
+
+    });
+</script>
+
+{% endblock %}

@@ -1,0 +1,91 @@
+body
+{
+
+font-family: 'Pacifico', cursive;
+}
+
+
+
+.nav-item {
+letter spacing: .2em;
+font-size :14px;
+text-transform :uppercase;
+}
+.dropdown-item {
+letter spacing: .2em;
+font-size :14px;
+text-transform :uppercase;
+}
+.my_bottom_margin{
+margin-bottom:10px;
+}
+.my_row_class.mx_auto
+{
+font-size:14px;
+}
+.my_row_class
+{
+padding-top:15px;
+}
+.my_image_padding
+{
+padding:5px;
+}
+.card-body h4{
+font-size:14px;
+text-transform:uppercase;
+letter-spacing:.2em;
+}
+/**product details **/
+.product_name
+{
+padding-top:15px;
+padding-bottom:20px;
+
+}
+.product_name.mx_auto
+{
+color:aqua;
+font-size:12px;
+text-decoration:none;
+}
+
+.my_prod_title{
+font-size:22px;
+text-transform:uppercase;
+letter-spacing:.2em;
+padding-top:15px;
+padding-bottom:10px;
+}
+.my_desc{
+padding-right:14px;
+
+}
+.my_search
+{
+padding-top:20px;}
+.my_custom_table{
+min-width:400px;
+font-size:14px;
+}
+.table_hed
+{
+font-weight:normal;
+text-transform:uppercase;
+letter-spacing:.2em;
+background-color:aqua;
+
+}
+.custom_a
+{
+text-decoration:none;
+}
+.custom_icon
+{
+text-decoration:none;
+color:aqua;
+}
+.my_custom_button
+{
+margin-top:20px;
+}
